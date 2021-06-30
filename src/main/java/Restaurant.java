@@ -65,7 +65,13 @@ public class Restaurant {
     }
     
     
-	
+	public int totalCostOfOrder(List<Item> itemsChoosenFromMenu) {
+		int totalCost = 0;
+		for (Item item : itemsChoosenFromMenu) {
+			totalCost += item.getPrice();
+		}
+		return totalCost;
+	}
     
 
 }
