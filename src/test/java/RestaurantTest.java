@@ -47,7 +47,32 @@ class RestaurantTest {
     
     
     
-   
+    //>>>>>>>>>>>>>>>>>>>>TOTAL COST of ORDER --New Feature TDD--<<<<<<<<<<<<<<<<<<<<<<<<<<
+    
+    @Test
+    public void totalCostOfOrder_should_return_388_if_items_choosen_from_menu_are_sweetcorn_and_vegetable_lasagne() {
+    	List<Item> itemsChoosenFromMenu = new ArrayList<>();
+    	itemsChoosenFromMenu.add(new Item("Sweet corn soup", 119));
+    	itemsChoosenFromMenu.add(new Item("Vegetable lasagne", 269));
+    	assertEquals(388, restaurant.totalCostOfOrder(itemsChoosenFromMenu));
+    }
+    
+    
+    @Test
+    public void totalCostOfOrder_should_return_269_if_items_choosen_from_menu_is_vegetable_lasagne() {
+    	List<Item> itemsChoosenFromMenu = new ArrayList<>();
+    	itemsChoosenFromMenu.add(new Item("Vegetable lasagne", 269));
+    	assertEquals(269, restaurant.totalCostOfOrder(itemsChoosenFromMenu));
+    }
+    
+    
+    @Test
+    public void totalCostOfOrder_should_return_0_if_no_items_are_choosen() {
+    	List<Item> itemsChoosenFromMenu = new ArrayList<>();
+    	assertEquals(0, restaurant.totalCostOfOrder(itemsChoosenFromMenu));
+    }
+    
+    //<<<<<<<<<<<<<<<<<<<<<TOTAL COST of ORDER  --New Feature TDD-->>>>>>>>>>>>>>>>>>>>>>>>>>
     
     
     
